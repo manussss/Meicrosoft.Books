@@ -1,0 +1,6 @@
+@Meicrosoft.Books.API_HostAddress = http://localhost:5208
+
+GET {{Meicrosoft.Books.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
