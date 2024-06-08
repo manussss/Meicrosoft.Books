@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Meicrosoft.Books.API.Controllers
 {
+    [ApiVersion("1.0")]
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v{version:apiVersion}/books")]
     public class BookController(IMediator mediator, IMapper mapper) : ControllerBase
     {
         [HttpPost]
