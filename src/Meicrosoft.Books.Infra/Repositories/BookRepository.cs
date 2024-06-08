@@ -6,6 +6,12 @@ namespace Meicrosoft.Books.Infra.Repositories
 {
     public class BookRepository(BookContext context) : IBookRepository
     {
+        public async Task CreateAsync(Book book)
+        {
+            await context.AddAsync(book);
+            await context.SaveChangesAsync();
+        }
+
         public async Task<IEnumerable<Book>> GetAllAsync()
         {
             return await context.Book.AsNoTracking().ToListAsync();
