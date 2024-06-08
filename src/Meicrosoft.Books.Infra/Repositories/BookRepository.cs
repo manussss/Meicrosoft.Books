@@ -22,9 +22,15 @@ namespace Meicrosoft.Books.Infra.Repositories
             return await context.Book.FindAsync(id);
         }
 
-        public async Task UpdateBook(Book book)
+        public async Task UpdateBookAsync(Book book)
         {
             context.Book.Update(book);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task DeleteBookAsync(Book book)
+        {
+            context.Remove(book);
             await context.SaveChangesAsync();
         }
     }

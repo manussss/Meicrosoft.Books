@@ -5,6 +5,7 @@
         Task CreateAsync(Book book);
         Task<IEnumerable<Book>> GetAllAsync();
         Task<Book?> GetByIdAsync(Guid id);
-        Task UpdateBook(Book book);
+        Task UpdateBookAsync(Book book);
+        Task DeleteBookAsync(Book book);
     }
 }
