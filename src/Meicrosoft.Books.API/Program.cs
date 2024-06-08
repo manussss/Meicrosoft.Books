@@ -10,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatorInjection();
 builder.Services.AddDatabaseInjection(builder.Configuration);
+builder.Services.AddRepositoriesInjection();
 
 var app = builder.Build();
 
