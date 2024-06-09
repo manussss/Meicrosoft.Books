@@ -1,6 +1,5 @@
 ﻿using Meicrosoft.Books.Domain.BooksAggregate;
 using Meicrosoft.Books.Infra.Data;
-using Microsoft.EntityFrameworkCore;
 
 namespace Meicrosoft.Books.Infra.Repositories
 {
@@ -10,11 +9,6 @@ namespace Meicrosoft.Books.Infra.Repositories
         {
             await context.AddAsync(book);
             await context.SaveChangesAsync();
-        }
-
-        public async Task<Book?> GetByIdAsync(Guid id)
-        {
-            return await context.Book.FindAsync(id);
         }
 
         public async Task UpdateBookAsync(Book book)

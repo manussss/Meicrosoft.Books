@@ -43,5 +43,47 @@ namespace Meicrosoft.Books.Application.Queries
 
             return summarizedBooks;
         }
+
+        public async Task<BookSummarizeViewModel?> GetByIdAsync(Guid id)
+        {
+            BookSummarizeViewModel? summarizedBook = new();
+
+            try
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@Id", id);
+
+                var query = @"
+                    select 
+	                    b.Title,
+	                    b.Description,
+	                    a.Name 
+                    from MeicrosoftBook.dbo.Book b 
+                    inner join MeicrosoftBook.dbo.Author a 
+                    on b.AuthorId = a.Id
+                    where b.Id = @Id
+                ";
+
+                using (var connection = new SqlConnection(configuration.GetConnectionString("BookConnection")))
+                {
+                    summarizedBook = (await connection.QueryAsync<BookSummarizeViewModel, AuthorSummarizeViewModel, BookSummarizeViewModel>(
+                        query,
+                        (book, author) =>
+                        {
+                            book.Author = author;
+                            return book;
+                        },
+                        parameters,
+                        splitOn: "Name"))
+                        .FirstOrDefault();
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "{Class} | {Method}", nameof(BookQuery), nameof(GetByIdAsync));
+            }
+
+            return summarizedBook;
+        }
     }
 }

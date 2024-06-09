@@ -29,5 +29,11 @@ namespace Meicrosoft.Books.API.Controllers
         {
             return Ok(await bookQuery.GetAllAsync());
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetByIdAsync(Guid id)
+        {
+            return Ok(await bookQuery.GetByIdAsync(id));
+        }
     }
 }

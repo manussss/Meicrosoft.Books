@@ -1,6 +1,4 @@
-﻿using Meicrosoft.Books.Domain.BooksAggregate;
-
-namespace Meicrosoft.Books.Application.Queries.ViewModels
+﻿namespace Meicrosoft.Books.Application.Queries.ViewModels
 {
     public class BookSummarizeViewModel
     {

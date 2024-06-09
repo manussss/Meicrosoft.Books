@@ -5,5 +5,6 @@ namespace Meicrosoft.Books.Application.Queries.Interfaces
     public interface IBookQuery
     {
         Task<IEnumerable<BookSummarizeViewModel>> GetAllAsync();
+        Task<BookSummarizeViewModel?> GetByIdAsync(Guid id);
     }
 }
