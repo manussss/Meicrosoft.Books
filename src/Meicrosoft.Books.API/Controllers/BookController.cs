@@ -33,7 +33,9 @@ namespace Meicrosoft.Books.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetByIdAsync(Guid id)
         {
-            return Ok(await bookQuery.GetByIdAsync(id));
+            var result = await bookQuery.GetByIdAsync(id);
+
+            return result is null ? NotFound() : Ok(result);
         }
     }
 }
