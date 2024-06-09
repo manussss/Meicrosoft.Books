@@ -12,11 +12,6 @@ namespace Meicrosoft.Books.Infra.Repositories
             await context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Book>> GetAllAsync()
-        {
-            return await context.Book.AsNoTracking().ToListAsync();
-        }
-
         public async Task<Book?> GetByIdAsync(Guid id)
         {
             return await context.Book.FindAsync(id);
