@@ -7,15 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EB39A4BD-1C4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{41BBC639-8F9F-4F3B-AFEC-D96D64376509}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meicrosoft.Books.Domain", "src\Meicrosoft.Books.Domain\Meicrosoft.Books.Domain.csproj", "{1A1C8E3A-D94D-4B5D-A838-A0DBE8638199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meicrosoft.Books.Domain", "src\Meicrosoft.Books.Domain\Meicrosoft.Books.Domain.csproj", "{1A1C8E3A-D94D-4B5D-A838-A0DBE8638199}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meicrosoft.Books.Infra", "src\Meicrosoft.Books.Infra\Meicrosoft.Books.Infra.csproj", "{5E610A0C-666A-4214-8D78-4235BFD21ECC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meicrosoft.Books.Infra", "src\Meicrosoft.Books.Infra\Meicrosoft.Books.Infra.csproj", "{5E610A0C-666A-4214-8D78-4235BFD21ECC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meicrosoft.Books.IoC", "src\Meicrosoft.Books.IoC\Meicrosoft.Books.IoC.csproj", "{130B18E0-7FB8-4448-AB5E-F6DA37EFB456}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meicrosoft.Books.IoC", "src\Meicrosoft.Books.IoC\Meicrosoft.Books.IoC.csproj", "{130B18E0-7FB8-4448-AB5E-F6DA37EFB456}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meicrosoft.Books.Application", "src\Meicrosoft.Books.Application\Meicrosoft.Books.Application.csproj", "{113599BF-E136-4501-A32B-A77512165489}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meicrosoft.Books.Application", "src\Meicrosoft.Books.Application\Meicrosoft.Books.Application.csproj", "{113599BF-E136-4501-A32B-A77512165489}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meicrosoft.Books.API", "src\Meicrosoft.Books.API\Meicrosoft.Books.API.csproj", "{960B4B7F-984F-4060-9B22-8BF540B65EED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meicrosoft.Books.API", "src\Meicrosoft.Books.API\Meicrosoft.Books.API.csproj", "{960B4B7F-984F-4060-9B22-8BF540B65EED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meicrosoft.Books.IntegrationTests", "tests\Meicrosoft.Books.IntegrationTests\Meicrosoft.Books.IntegrationTests.csproj", "{84CC1576-07A6-4E55-A176-15BB9F015E07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{960B4B7F-984F-4060-9B22-8BF540B65EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{960B4B7F-984F-4060-9B22-8BF540B65EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{960B4B7F-984F-4060-9B22-8BF540B65EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84CC1576-07A6-4E55-A176-15BB9F015E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84CC1576-07A6-4E55-A176-15BB9F015E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84CC1576-07A6-4E55-A176-15BB9F015E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84CC1576-07A6-4E55-A176-15BB9F015E07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{130B18E0-7FB8-4448-AB5E-F6DA37EFB456} = {EB39A4BD-1C4C-4A04-B72C-185E4963E4C8}
 		{113599BF-E136-4501-A32B-A77512165489} = {EB39A4BD-1C4C-4A04-B72C-185E4963E4C8}
 		{960B4B7F-984F-4060-9B22-8BF540B65EED} = {EB39A4BD-1C4C-4A04-B72C-185E4963E4C8}
+		{84CC1576-07A6-4E55-A176-15BB9F015E07} = {41BBC639-8F9F-4F3B-AFEC-D96D64376509}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1CECA05A-D2BB-419C-AD36-BD35BF4EEB5A}

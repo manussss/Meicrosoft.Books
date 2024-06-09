@@ -20,7 +20,7 @@ namespace Meicrosoft.Books.API.Controllers
 
             var result = await mediator.Send(new CreateBookCommand(mapper.Map<Book>(dto)));
 
-            return result.Success ? Ok(result) : BadRequest(result);
+            return result.Success ? Created(nameof(CreateAsync), result) : BadRequest(result);
         }
     }
 }
